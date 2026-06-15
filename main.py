@@ -19,7 +19,7 @@ from config import COOLDOWN_SECONDS
 
 detector = PlateDetector()
 
-cap = cv2.VideoCapture(1)
+cap = cv2.VideoCapture(0)
 
 # IMPORTANT FOR PERFORMANCE
 cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
