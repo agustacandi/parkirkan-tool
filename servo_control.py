@@ -14,10 +14,10 @@ def open_gate():
         initial_angle=None,
     )
 
-    servo.angle = 90
+    servo.angle = 0
     sleep(3)
 
-    servo.angle = 0
+    servo.angle = 90
     sleep(1)
 
     servo.detach()
