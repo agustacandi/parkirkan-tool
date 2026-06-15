@@ -4,7 +4,8 @@ from time import sleep
 servo = AngularServo(
     18,
     min_angle=0,
-    max_angle=90
+    max_angle=90,
+    initial_angle=None,
 )
 
 
