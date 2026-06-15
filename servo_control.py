@@ -13,6 +13,8 @@ servo = AngularServo(
     initial_angle=None,
 )
 
+servo.detach()
+
 
 def open_gate():
     servo.angle = 90
@@ -20,3 +22,5 @@ def open_gate():
 
     servo.angle = 0
     sleep(1)
+
+    servo.detach()
