@@ -6,17 +6,14 @@ from time import sleep
 
 from config import SERVO_GPIO
 
-servo = AngularServo(
-    SERVO_GPIO,
-    min_angle=0,
-    max_angle=90,
-    initial_angle=None,
-)
-
-servo.detach()
-
-
 def open_gate():
+    servo = AngularServo(
+        SERVO_GPIO,
+        min_angle=0,
+        max_angle=90,
+        initial_angle=None,
+    )
+
     servo.angle = 90
     sleep(3)
 
@@ -24,3 +21,4 @@ def open_gate():
     sleep(1)
 
     servo.detach()
+    servo.close()
