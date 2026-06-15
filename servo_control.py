@@ -1,8 +1,13 @@
+import os
+os.environ["GPIOZERO_PIN_FACTORY"] = "pigpio"
+
 from gpiozero import AngularServo
 from time import sleep
 
+from config import SERVO_GPIO
+
 servo = AngularServo(
-    18,
+    SERVO_GPIO,
     min_angle=0,
     max_angle=90,
     initial_angle=None,
